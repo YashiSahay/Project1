@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+  <link rel="stylesheet" href="style.css" />
+    <style>.carousel-section {
+        background: #111;
+        padding: 1rem 0;
+      }
+      
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        padding: 0 40px;
+      }
+      
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
+      
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .carousel-item {
+        width: 200px;
+        height: 300px;
+        background: #333;
+        border-radius: 10px;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center; */
+      }
+      
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;;
+        display: block;
+        object-position: center center;
+        border-radius: 10px;
+
+      }
+      
+      .carousel-btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
+        padding: 0 10px;
+        border-radius: 3px;
+      }
+      
+      .carousel-btn.left {
+        left: 10px;
+      }
+      
+      .carousel-btn.right {
+        right: 10px;
+      }
+    .typewriter {
+      font-size: 1.8rem;
+      overflow: hidden;
+      border-right: .15em solid red;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink .75s step-end infinite;
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+
+    .profiles {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .profiles h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .profile-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .profile-icons .profile {
+      width: 100px;
+      height: 100px;
+      background: rgb(225, 27, 27);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+      color: #fff;
+    }
+
+    .profile:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <nav>
+      <span><img width="63" height="93"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/home/nflxlogo.png" alt="Netflix Logo" /></span>
+      <div>
+        <button class="btn">English</button>
+        <button class="btn btn-red-sm">Sign In</button>
+      </div>
+    </nav>
+    <div class="box"></div>
+
+    <!-- HERO Section with Typewriter -->
+    <div class="hero">
+      <div class="typewriter">Enjoy big movies, hit series and more from ₹ 149.</div>
+      <span>Join today. Cancel anytime.</span>
+      <span>Ready to watch? Enter your email to create or restart your membership.</span>
+      <div class="hero-buttons">
+        <input type="text" placeholder="Email Address" />
+        <button class="btn btn-red">Get Started &gt;</button>
+      </div>
+    </div>
+
+    <div class="separation"></div>
+  </div>
+
+  <!-- WHO'S WATCHING Section -->
+  <section class="profiles">
+    <h2>Who's Watching?</h2>
+    <div class="profile-icons">
+      <div class="profile">Yashi</div>
+      <div class="profile">Dad</div>
+      <div class="profile">Mom</div>
+      <div class="profile">Sister</div>
+    </div>
+  </section>
+  <section class="carousel-section">
+    <h2 style="margin-left: 20px;font-size:xx-large;color:white;font-style:normal;">Popular on Netflix</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+      <div class="carousel" id="carousel">
+        <div class="carousel-item"><img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/07/jigra-2024-poster.jpg"> alt="Movie 1"></div>
+        <div class="carousel-item"><img src="https://media.harrypotterfanzone.com/philosophers-stone-theatrical-poster.jpg" alt="Movie 2"></div>
+       <div class="carousel-item"><img src="https://ew.com/thmb/zJaJ2eM-xzrA3fdk59bu6koi5EA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/avengers-russia-2000-747543ad31c94d1c87196d6275630d42.jpg" alt="Movie 3"></div>
+        <div class="carousel-item"><img src="https://media-cache.cinematerial.com/p/500x/v6ak9gmi/yeh-jawaani-hai-deewani-indian-movie-poster.jpg?v=1456494991" alt="Movie 4"></div>
+        <div class="carousel-item"><img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2020/04/75-10-306x393.jpg" alt="Movie 5"></div>
+        <div class="carousel-item"><img src="https://cinetown.s3.ap-south-1.amazonaws.com/movies/poster/1731411989.jpeg" alt="Movie 6"></div>
+        <div class="carousel-item"><img src="https://image.tmdb.org/t/p/original/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg" alt="Movie 7"></div>
+      <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Continue with your original sections -->
+  <section class="first">
+    <div>
+      <span>Enjoy on your TV</span>
+      <span>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
+    </div>
+
+    <div class="secImg">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="" />
+      <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+        autoplay loop muted></video>
+    </div>
+  </section>
+  <div class="separation"></div>
+
+  <section class="first second">
+
+      <div class="secImg">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="">
+
+      </div>
+      <div>
+          <span>Download your shows to watch offline</span>
+          <span>Save your favourites easily and always have something to watch.</span>
+      </div>
+  </section>
+
+  <div class="separation"></div>
+  <section class="first third">
+      <div>
+          <span>Watch everywhere</span>
+          <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+      </div>
+
+      <div class="secImg">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+          <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+              autoplay loop muted></video>
+      </div>
+  </section>
+  <div class="separation"></div>
+
+
+  <section class="first second">
+
+      <div class="secImg">
+          <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+              alt="">
+
+      </div>
+      <div>
+          <span>Create profiles for kids</span>
+          <span>Send children on adventures with their favourite characters in a space made just for them—free with
+              your membership.</span>
+      </div>
+  </section>
+
+  <div class="separation"></div>
+
+  <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faqbox">
+          <span>What is NetFlix</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+      </div>
+      <div class="faqbox">
+          <span>How much does Netflix cost?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+      </div>
+      <div class="faqbox">
+          <span>What can I watch on Netflix?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+      </div>
+      <div class="faqbox">
+          <span>Where can I watch?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+      </div>
+  </section>
+  <div class="separation"></div>
+
+  <footer>
+      <div class="questions">
+          Questions? Call 000-800-919-1694
+      </div>
+      <div class="footer">
+          <div class="footer-item"> 
+              <a href="faq">Investor Relations</a>
+              <a href="faq">Jobs</a>
+              <a href="faq">Ways to Watch</a>
+              <a href="faq">Terms of Use</a>
+          </div>
+
+          <div class="footer-item"> 
+              <a href="faq">Help Centre</a>
+              <a href="faq">Account</a>
+              <a href="faq">Speed Test</a>
+              <a href="faq">Legal Notices</a>
+          </div>
+          <div class="footer-item">
+              <a href="faq">Media Centre</a>
+              <a href="faq">Privacy</a>
+              <a href="faq">Cookie Preferences</a> 
+              <a href="faq">Corporate</a>
+          </div>
+
+          <div class="footer-item">
+              <a href="faq">Contact Us</a>
+              <a href="faq">Speed Test</a> 
+              <a href="faq">Legal Notices</a> 
+              <a href="faq">Only on Netflix</a>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    function scrollCarousel(direction) {
+      const carousel = document.getElementById("carousel");
+      const scrollAmount = 220;
+      carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  <!-- Add rest of your sections and footer as needed -->
+
+</body>
+
+</html>
